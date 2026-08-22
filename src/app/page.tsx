@@ -127,9 +127,14 @@ export default function Home() {
             <a
               href={site.person.url}
               rel="me"
-              className="glow-text mt-3 inline-block font-display text-2xl font-medium tracking-[-0.02em] text-ink transition-colors hover:text-amber md:text-3xl"
+              className="group mt-3 inline-flex flex-wrap items-baseline gap-x-4 gap-y-1"
             >
-              {site.person.urlLabel} ↗
+              <span className="glow-text font-display text-2xl font-medium tracking-[-0.02em] text-ink transition-colors group-hover:text-amber md:text-3xl">
+                {site.person.urlLabel}
+              </span>
+              <span className="font-mono text-[11px] tracking-[0.2em] text-ink-faint transition-colors group-hover:text-amber-dim">
+                [ {site.person.urlTag.toUpperCase()} ]
+              </span>
             </a>
           </div>
           <div className="font-mono text-[11px] leading-relaxed tracking-wider text-ink-faint">
