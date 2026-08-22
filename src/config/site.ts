@@ -5,8 +5,8 @@
 
 export const site = {
   name: "Amick Labs",
-  /** Canonical origin. Vercel redirects the apex to www, so this must be the www host. */
-  url: "https://www.amicklabs.com",
+  /** Canonical origin. Must match the host Vercel serves as primary (www should redirect here). */
+  url: "https://amicklabs.com",
   legalName: "Amick Labs LLC",
   tagline: "Teaching engineers. Building things. Occasionally both at once.",
   /** One honest paragraph about what the company is. */
