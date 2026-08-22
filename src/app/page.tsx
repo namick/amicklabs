@@ -1,4 +1,4 @@
-import { Scope } from "@/components/Scope";
+import { Trace } from "@/components/Trace";
 import { practices, readouts, site, subjects, writing } from "@/config/site";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -30,39 +30,33 @@ export default function Home() {
       <section className="relative mx-auto max-w-6xl px-6 pt-10 pb-24 md:pt-16">
         <div className="graticule pointer-events-none absolute inset-0 -z-10" />
 
-        <div className="rise relative overflow-hidden rounded-sm border border-line-strong bg-bg-raised">
-          {/* bezel header */}
-          <div className="flex items-center justify-between border-b border-line px-4 py-2 font-mono text-[11px] tracking-widest text-ink-faint">
-            <span>CH1 · {site.legalName.toUpperCase()}</span>
-            <span className="hidden sm:inline">XY MODE · 1 V/DIV</span>
-            <span>
-              <span className="blink text-amber">●</span> RUN
-            </span>
+        <div className="rise relative">
+          <p className="font-mono text-[11px] tracking-[0.22em] text-ink-faint">
+            {site.legalName.toUpperCase()} · <span className="text-amber">●</span> ACTIVE
+          </p>
+          <h1 className="glow-text mt-6 font-display text-[clamp(3.5rem,12vw,10rem)] font-medium leading-[0.9] tracking-[-0.04em] text-ink">
+            Amick
+            <br />
+            <span className="text-amber">Labs</span>
+          </h1>
+
+          {/* the trace: flat until you move or scroll */}
+          <div className="mt-10 h-24 w-full cursor-crosshair">
+            <Trace className="block h-full w-full" />
           </div>
 
-          <div className="relative">
-            <Scope className="block h-[42vh] min-h-[280px] w-full md:h-[52vh]" />
-            {/* wordmark sits on the screen itself */}
-            <div className="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 md:p-10">
-              <h1 className="glow-text font-display text-[clamp(3rem,9vw,7.5rem)] leading-[0.9] tracking-tight text-ink">
-                Amick <em className="text-amber">Labs</em>
-              </h1>
-            </div>
-          </div>
-
-          {/* readouts */}
-          <div className="grid grid-cols-3 divide-x divide-line border-t border-line font-mono text-xs">
+          <div className="flex flex-wrap gap-x-10 gap-y-3 border-t border-line pt-4 font-mono text-xs">
             {readouts.map((r) => (
-              <div key={r.label} className="px-4 py-3">
-                <div className="text-[10px] tracking-[0.2em] text-ink-faint">{r.label}</div>
-                <div className="mt-1 text-amber">{r.value}</div>
+              <div key={r.label} className="flex items-baseline gap-3">
+                <span className="text-[10px] tracking-[0.2em] text-ink-faint">{r.label}</span>
+                <span className="text-amber">{r.value}</span>
               </div>
             ))}
           </div>
         </div>
 
         <p
-          className="rise mt-12 max-w-2xl font-display text-3xl leading-snug text-ink md:text-4xl"
+          className="rise mt-16 max-w-2xl font-display text-3xl font-medium leading-tight tracking-[-0.02em] text-ink md:text-4xl"
           style={{ animationDelay: "120ms" }}
         >
           {site.tagline}
@@ -82,7 +76,7 @@ export default function Home() {
           <div className="mt-10 grid gap-px bg-line md:grid-cols-3">
             {practices.map((p) => (
               <article key={p.key} className="group bg-bg p-8 transition-colors hover:bg-bg-raised">
-                <h2 className="font-display text-4xl text-ink">
+                <h2 className="font-display text-3xl font-medium tracking-[-0.02em] text-ink">
                   {p.title}
                   <span className="text-amber transition-opacity group-hover:opacity-100 md:opacity-0">
                     .
@@ -111,7 +105,7 @@ export default function Home() {
           <dl className="divide-y divide-line border-y border-line">
             {subjects.map((s) => (
               <div key={s.area} className="grid gap-2 py-5 sm:grid-cols-[12rem_1fr]">
-                <dt className="font-display text-2xl text-ink">{s.area}</dt>
+                <dt className="font-display text-xl font-medium tracking-[-0.01em] text-ink">{s.area}</dt>
                 <dd className="flex flex-wrap gap-x-4 gap-y-1 self-center font-mono text-xs text-ink-muted">
                   {s.topics.map((t) => (
                     <span key={t}>{t}</span>
@@ -144,7 +138,7 @@ export default function Home() {
             <a
               href={site.person.url}
               rel="me"
-              className="glow-text mt-3 inline-block font-display text-4xl text-ink transition-colors hover:text-amber md:text-5xl"
+              className="glow-text mt-3 inline-block font-display text-3xl font-medium tracking-[-0.03em] text-ink transition-colors hover:text-amber md:text-5xl"
             >
               {site.person.name} ↗
             </a>
