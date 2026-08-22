@@ -50,4 +50,6 @@ None of these exist yet, so nothing on the page points at them:
 ## Deploy
 
 Standard Next.js. `vercel` from this directory, or connect the repo in the dashboard.
-If the domain ever changes, update `metadataBase` in `src/app/layout.tsx`.
+If the domain ever changes, update `site.url` in `src/config/site.ts`. It must match the host
+Vercel actually serves (currently www; the apex redirects to it), or Search Console will
+reject the sitemap.

@@ -7,7 +7,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"] });
 
-const SITE_URL = "https://amicklabs.com";
+const SITE_URL = site.url;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
