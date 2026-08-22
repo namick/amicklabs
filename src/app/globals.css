@@ -75,6 +75,15 @@ body {
   mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 75%);
 }
 
+/* Amber with depth: lit from above, deepening toward the baseline */
+.text-amber-depth {
+  background: linear-gradient(180deg, #ffd166 0%, var(--amber) 45%, #d98a00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+
 .glow-text {
   text-shadow: 0 0 24px var(--amber-glow);
 }

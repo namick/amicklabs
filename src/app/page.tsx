@@ -13,14 +13,9 @@ export default function Home() {
   return (
     <main className="flex-1">
       {/* ── Top bar ───────────────────────────────────────────── */}
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 font-mono text-xs tracking-wider text-ink-muted">
-        <span className="text-ink">
-          <span className="text-amber">◆</span> {site.name.toUpperCase()}
-        </span>
-      </header>
 
       {/* ── Hero: the instrument ──────────────────────────────── */}
-      <section className="relative mx-auto max-w-6xl px-6 pt-10 pb-24 md:pt-16">
+      <section className="relative mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28">
         <div className="graticule pointer-events-none absolute inset-0 -z-10" />
 
         <div className="rise relative">
@@ -28,7 +23,10 @@ export default function Home() {
             {site.legalName.toUpperCase()} · <span className="text-amber">●</span> ACTIVE
           </p>
           <h1 className="glow-text mt-6 font-display text-[clamp(3rem,10vw,8.5rem)] font-medium leading-[0.9] tracking-[-0.04em] text-ink">
-            Amick <em className="text-amber">Labs</em>
+            Amick{" "}
+            <span className="font-light text-ink-faint">[</span>
+            <span className="text-amber-depth">Labs</span>
+            <span className="font-light text-ink-faint">]</span>
           </h1>
 
           {/* the trace: flat until you move or scroll */}
