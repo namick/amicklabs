@@ -1,6 +1,7 @@
 # amicklabs.com
 
-Placeholder site for **Amick Labs LLC** — Next.js 16 (App Router), Tailwind v4, pnpm.
+The placeholder site for Amick Labs LLC. Next.js 16 (App Router), Tailwind v4, pnpm.
+It's open because there's no reason for it not to be.
 
 ```bash
 pnpm dev     # http://localhost:3000
@@ -8,38 +9,46 @@ pnpm build
 pnpm lint
 ```
 
-## Editing the content
+## Where things live
 
-Every word on the page comes from **`src/config/site.ts`**. Change copy there; the
-components in `src/app/page.tsx` only render it. Items marked `TODO` in that file
-are obvious placeholders (founding year, location).
+- **Copy** — all of it is in `src/config/site.ts`. The components in `src/app/page.tsx`
+  just render whatever is there. If I want to change a sentence, that's the file.
+- **Colors and fonts** — tokens at the top of `src/app/globals.css`. Space Grotesk for
+  display, Geist for body, Geist Mono for the readouts.
+- **The amber line in the hero** — `src/components/Trace.tsx`. It's flat until the
+  mouse moves or the page scrolls, ripples, then settles. The two knobs are
+  `energy *= 0.94` (how fast it settles) and the `0.42` amplitude multiplier.
+- **The wordmark gradient** — `.text-amber-depth` in `globals.css`.
 
-Design tokens (colors, fonts) live at the top of `src/app/globals.css`.
-The oscilloscope hero is `src/components/Scope.tsx`.
+## Decisions I already made, so I stop re-deciding them
 
-## Ideas for filling this out later
+- One outbound link only (nathanamick.com, in the footer). Everything else about
+  me lives over there. Don't duplicate the blog, the socials, or the projects here.
+- No empty links. The Writing section stays link-free until there's something to
+  link to.
+- I can't name training partners yet. When I can, `practices[0]` has a TODO.
+- `founded` in `site.ts` is a guess. Fix it when I look it up.
+- Tried an outlined "Labs" in the wordmark. Chrome draws a hairline gap wherever
+  the text fill meets `-webkit-text-stroke`, with every font. Would need SVG.
+  Didn't like the neon look anyway. Moved on.
 
-Things a one-person training/consulting LLC site commonly carries — none are
-wired up yet, so nothing on the page links anywhere that doesn't exist:
+## Things I might add later
 
-- **Courses catalog** — a list of the courses you teach with length (e.g. "3 days"),
-  format (live online / on-site), audience level, and a one-line outcome.
-- **Training partners** — logos or names once you're allowed to name them.
-- **Testimonials** — two or three short quotes from students or client leads.
-- **Availability / calendar** — "Booking Q1 2027" style line, or a link to a
-  scheduling tool.
-- **Talks & workshops** — conference talks, meetup sessions, recorded videos.
-- **Open source / Labs** — a few repos with a sentence each.
-- **Writing** — the dev blog. Suggested route: `/notes` with MDX; the section on
-  the home page is already there and just needs links.
-- **Newsletter signup** — only if you'll actually send one.
-- **Contact** — currently routes everything to nathanamick.com. Add a mailto or
-  form when you want direct inbound.
-- **Legal footer** — state of formation, business address if required, privacy
-  policy if you add analytics or a form.
+None of these exist yet, so nothing on the page points at them:
+
+- A courses list: length, format, audience, one-line outcome each
+- Partner names / logos, once allowed
+- A couple of testimonials
+- An availability line ("booking Q1 2027")
+- Talks and workshops
+- Open source / Labs projects with a sentence each
+- The blog itself — probably `/notes` with MDX; the home page section is already
+  waiting for links
+- A mailto or contact form, if I ever want inbound here instead of via the
+  personal site
+- Legal footer bits (state of formation, privacy policy) if I add analytics or a form
 
 ## Deploy
 
-Standard Next.js — `vercel` from this directory, or connect the repo in the
-Vercel dashboard. Update `metadataBase` in `src/app/layout.tsx` if the domain
-differs from `amicklabs.com`.
+Standard Next.js. `vercel` from this directory, or connect the repo in the dashboard.
+If the domain ever changes, update `metadataBase` in `src/app/layout.tsx`.
