@@ -26,7 +26,6 @@ pnpm lint
 - No empty links. The Writing section stays link-free until there's something to
   link to.
 - I can't name training partners yet. When I can, `practices[0]` has a TODO.
-- `founded` in `site.ts` is a guess. Fix it when I look it up.
 - Tried an outlined "Labs" in the wordmark. Chrome draws a hairline gap wherever
   the text fill meets `-webkit-text-stroke`, with every font. Would need SVG.
   Didn't like the neon look anyway. Moved on.

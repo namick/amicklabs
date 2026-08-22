@@ -12,7 +12,6 @@ export const site = {
   /** One honest paragraph about what the company is. */
   intro:
     "Amick Labs is my independent practice. I'm Nathan Amick, a software engineer with twenty-five years of production work, now pointed at teaching: most weeks I'm teaching other engineers, and the rest I'm building the things I teach about.",
-  founded: "2020", // TODO: real founding year
   location: "Indianapolis, IN",
   person: {
     name: "Nathan Amick",
@@ -81,7 +80,6 @@ export const writing = {
 
 /** Small instrument-panel readouts in the hero. Purely decorative — change or remove. */
 export const readouts = [
-  { label: "EST", value: site.founded },
   { label: "MODE", value: "TEACH / BUILD" },
   { label: "STATUS", value: "ACTIVE" },
 ] as const;
