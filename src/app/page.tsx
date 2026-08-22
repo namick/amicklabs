@@ -72,7 +72,7 @@ export default function Home() {
       {/* ── Practices ─────────────────────────────────────────── */}
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <Eyebrow>What the lab does</Eyebrow>
+          <Eyebrow>What I do</Eyebrow>
           <div className="mt-10 grid gap-px bg-line md:grid-cols-3">
             {practices.map((p) => (
               <article key={p.key} className="group bg-bg p-8 transition-colors hover:bg-bg-raised">
@@ -99,7 +99,7 @@ export default function Home() {
           <div>
             <Eyebrow>Subjects taught</Eyebrow>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
-              Courses are adapted to the room. These are the areas covered most often.
+              I adapt every course to the room. These are the areas I cover most often.
             </p>
           </div>
           <dl className="divide-y divide-line border-y border-line">
@@ -134,7 +134,7 @@ export default function Home() {
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-14 md:flex-row md:items-end md:justify-between">
           <div>
-            <Eyebrow>The person behind it</Eyebrow>
+            <Eyebrow>More about me</Eyebrow>
             <a
               href={site.person.url}
               rel="me"

@@ -9,7 +9,7 @@ export const site = {
   tagline: "Teaching engineers. Building things. Occasionally both at once.",
   /** One honest paragraph about what the company is. */
   intro:
-    "Amick Labs is the independent practice of Nathan Amick — a software engineer who spends most weeks teaching other engineers, and the rest building the things he teaches about.",
+    "Amick Labs is my independent practice. I'm Nathan Amick, a software engineer who spends most weeks teaching other engineers and the rest building the things I teach about.",
   founded: "2020", // TODO: real founding year
   location: "United States", // TODO: city / state if you want it shown
   person: {
@@ -26,25 +26,25 @@ export const practices = [
     title: "Teaching",
     lead: "Instructor-led technical training.",
     body:
-      "Multi-day courses and workshops delivered through established training partners, plus private sessions for engineering teams. Live, hands-on, and built around the questions people actually ask.",
+      "I teach multi-day courses and workshops through established training partners, and run private sessions for engineering teams. Everything is live and hands-on, built around the questions people actually ask.",
     // TODO: once you can name partners, list them here.
-    detail: "Delivered through training partners and direct to teams.",
+    detail: "I work through training partners and directly with teams.",
   },
   {
     key: "consulting",
     title: "Consulting",
     lead: "Short engagements, clear outcomes.",
     body:
-      "Architecture reviews, proof-of-concept builds, and fractional engineering for teams who need a senior hand for a defined stretch of time.",
-    detail: "Limited availability. Reach out via the personal site.",
+      "I take on architecture reviews, proof-of-concept builds, and fractional engineering for teams that need a senior hand for a defined stretch of time.",
+    detail: "My availability is limited. Reach me through my personal site.",
   },
   {
     key: "labs",
     title: "Labs",
     lead: "Experiments, tools, and open source.",
     body:
-      "The reason for the name. Side projects, internal tooling, and the occasional thing that escapes into the wild. Most of it is research for the classroom.",
-    detail: "Notes and write-ups will land here eventually.",
+      "This is where the name comes from. My side projects, internal tooling, and the occasional thing that escapes into the wild. Most of it is research for the classroom.",
+    detail: "I'll post notes and write-ups here eventually.",
   },
 ] as const;
 
@@ -72,7 +72,7 @@ export const subjects = [
 export const writing = {
   status: "In progress",
   body:
-    "Long-form notes from the classroom — the explanations that worked, the ones that didn't, and the things worth writing down. Nothing published yet; when there is, it'll be here.",
+    "I'm working on long-form notes from the classroom — the explanations that worked, the ones that didn't, and the things worth writing down. I haven't published anything yet; when I do, it'll be here.",
 } as const;
 
 /** Small instrument-panel readouts in the hero. Purely decorative — change or remove. */
