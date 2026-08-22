@@ -1,7 +1,6 @@
 # amicklabs.com
 
 The placeholder site for Amick Labs LLC. Next.js 16 (App Router), Tailwind v4, pnpm.
-It's open because there's no reason for it not to be.
 
 ```bash
 pnpm dev     # http://localhost:3000
