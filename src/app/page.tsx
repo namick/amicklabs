@@ -17,13 +17,6 @@ export default function Home() {
         <span className="text-ink">
           <span className="text-amber">◆</span> {site.name.toUpperCase()}
         </span>
-        <a
-          href={site.person.url}
-          className="transition-colors hover:text-amber"
-          rel="me"
-        >
-          {site.person.urlLabel} ↗
-        </a>
       </header>
 
       {/* ── Hero: the instrument ──────────────────────────────── */}
@@ -34,10 +27,8 @@ export default function Home() {
           <p className="font-mono text-[11px] tracking-[0.22em] text-ink-faint">
             {site.legalName.toUpperCase()} · <span className="text-amber">●</span> ACTIVE
           </p>
-          <h1 className="glow-text mt-6 font-display text-[clamp(3.5rem,12vw,10rem)] font-medium leading-[0.9] tracking-[-0.04em] text-ink">
-            Amick
-            <br />
-            <span className="text-amber">Labs</span>
+          <h1 className="glow-text mt-6 font-display text-[clamp(3rem,10vw,8.5rem)] font-medium leading-[0.9] tracking-[-0.04em] text-ink">
+            Amick <em className="text-amber">Labs</em>
           </h1>
 
           {/* the trace: flat until you move or scroll */}
@@ -138,9 +129,9 @@ export default function Home() {
             <a
               href={site.person.url}
               rel="me"
-              className="glow-text mt-3 inline-block font-display text-3xl font-medium tracking-[-0.03em] text-ink transition-colors hover:text-amber md:text-5xl"
+              className="glow-text mt-3 inline-block font-display text-2xl font-medium tracking-[-0.02em] text-ink transition-colors hover:text-amber md:text-3xl"
             >
-              {site.person.name} ↗
+              {site.person.urlLabel} ↗
             </a>
           </div>
           <div className="font-mono text-[11px] leading-relaxed tracking-wider text-ink-faint">
