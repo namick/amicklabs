@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# amicklabs.com
 
-## Getting Started
-
-First, run the development server:
+Placeholder site for **Amick Labs LLC** — Next.js 16 (App Router), Tailwind v4, pnpm.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dev     # http://localhost:3000
+pnpm build
+pnpm lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing the content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Every word on the page comes from **`src/config/site.ts`**. Change copy there; the
+components in `src/app/page.tsx` only render it. Items marked `TODO` in that file
+are obvious placeholders (founding year, location).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Design tokens (colors, fonts) live at the top of `src/app/globals.css`.
+The oscilloscope hero is `src/components/Scope.tsx`.
 
-## Learn More
+## Ideas for filling this out later
 
-To learn more about Next.js, take a look at the following resources:
+Things a one-person training/consulting LLC site commonly carries — none are
+wired up yet, so nothing on the page links anywhere that doesn't exist:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Courses catalog** — a list of the courses you teach with length (e.g. "3 days"),
+  format (live online / on-site), audience level, and a one-line outcome.
+- **Training partners** — logos or names once you're allowed to name them.
+- **Testimonials** — two or three short quotes from students or client leads.
+- **Availability / calendar** — "Booking Q1 2027" style line, or a link to a
+  scheduling tool.
+- **Talks & workshops** — conference talks, meetup sessions, recorded videos.
+- **Open source / Labs** — a few repos with a sentence each.
+- **Writing** — the dev blog. Suggested route: `/notes` with MDX; the section on
+  the home page is already there and just needs links.
+- **Newsletter signup** — only if you'll actually send one.
+- **Contact** — currently routes everything to nathanamick.com. Add a mailto or
+  form when you want direct inbound.
+- **Legal footer** — state of formation, business address if required, privacy
+  policy if you add analytics or a form.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Standard Next.js — `vercel` from this directory, or connect the repo in the
+Vercel dashboard. Update `metadataBase` in `src/app/layout.tsx` if the domain
+differs from `amicklabs.com`.
