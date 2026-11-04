@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     "technical training",
     "software engineering instructor",
     "AI engineering training",
+    "video production",
     "Indianapolis",
   ],
   authors: [{ name: site.person.name, url: site.person.url }],

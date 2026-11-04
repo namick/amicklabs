@@ -21,8 +21,11 @@ pnpm lint
 
 ## Decisions I already made, so I stop re-deciding them
 
-- One outbound link only (nathanamick.com, in the footer). Everything else about
-  me lives over there. Don't duplicate the blog, the socials, or the projects here.
+- nathanamick.com is the one link about me. Everything else about me lives over
+  there. Don't duplicate the blog, the socials, or the projects here.
+- The footer also has a contact email and a link to Studio, plus links to Studio's
+  legal pages once they exist, because Stripe needs the LLC's business, contact
+  and policies findable here.
 - No empty links. The Writing section stays link-free until there's something to
   link to.
 - I can't name training partners yet. When I can, `practices[0]` has a TODO.
@@ -42,9 +45,7 @@ None of these exist yet, so nothing on the page points at them:
 - Open source / Labs projects with a sentence each
 - The blog itself — probably `/notes` with MDX; the home page section is already
   waiting for links
-- A mailto or contact form, if I ever want inbound here instead of via the
-  personal site
-- Legal footer bits (state of formation, privacy policy) if I add analytics or a form
+- Terms, privacy and refund links in the footer, once Studio's pages exist
 
 ## Deploy
 

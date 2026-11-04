@@ -8,10 +8,12 @@ export const site = {
   /** Canonical origin. Must match the host Vercel serves as primary (www should redirect here). */
   url: "https://amicklabs.com",
   legalName: "Amick Labs LLC",
+  entity: "An Indiana limited liability company",
+  email: "hello@amicklabs.com",
   tagline: "Teaching engineers. Building things. Occasionally both at once.",
   /** One honest paragraph about what the company is. */
   intro:
-    "Amick Labs is my independent practice. I'm Nathan Amick, a software engineer with twenty-five years of production work, now pointed at teaching: most weeks I'm teaching other engineers, and the rest I'm building the things I teach about.",
+    "Amick Labs LLC is my independent practice. I'm Nathan Amick, a software engineer with twenty-five years of production work. Most weeks I'm teaching other engineers. The rest I'm consulting on software, producing videos for subscription clients, and building the things I teach about.",
   location: "Indianapolis, IN",
   person: {
     name: "Nathan Amick",
@@ -22,7 +24,7 @@ export const site = {
   },
 } as const;
 
-/** The three things the company does. Order is the order on the page. */
+/** The four things the company does. Order is the order on the page. */
 export const practices = [
   {
     key: "teaching",
@@ -39,7 +41,15 @@ export const practices = [
     lead: "Short engagements, clear outcomes.",
     body:
       "I take on architecture reviews, proof-of-concept builds, and fractional engineering for teams that need a senior hand for a defined stretch of time. Lately that means agentic systems that do real work in production, not demos.",
-    detail: "My availability is limited. Reach me through my personal site.",
+    detail: "My availability is limited. My email is at the bottom of this page.",
+  },
+  {
+    key: "video",
+    title: "Video",
+    lead: "Video production, by weekly subscription.",
+    body:
+      "I turn a client's raw footage, outlines and sketches into finished videos, with titles, descriptions, thumbnails and captions. I make them with my own tools and AI agents. Clients subscribe, send material from their phones and review each cut in Studio, and either of us can stop at any time.",
+    detail: "Two finished videos a week. Weekly price set per client.",
   },
   {
     key: "labs",
@@ -82,4 +92,9 @@ export const writing = {
 export const readouts = [
   { label: "MODE", value: "TEACH / BUILD" },
   { label: "STATUS", value: "ACTIVE" },
+] as const;
+
+/** Footer links. Add only once these pages are live: the README's no-empty-links rule still holds. Legal links (terms, privacy, refunds) get added once Studio's pages are live. */
+export const footerLinks = [
+  { label: "Studio", href: "https://studio.amicklabs.com" },
 ] as const;
