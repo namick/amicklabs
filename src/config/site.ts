@@ -1,5 +1,5 @@
 /**
- * All site copy lives here. Edit freely — components only read from this file.
+ * Home page copy and support page introduction. Form labels live in SupportForm.tsx.
  * Anything marked TODO is a placeholder worth replacing with your own words.
  */
 
@@ -96,8 +96,19 @@ export const readouts = [
 
 /** Footer links. The legal pages live on Studio. */
 export const footerLinks = [
+  { label: "Support", href: "/support" },
   { label: "Studio", href: "https://studio.amicklabs.com" },
   { label: "Terms", href: "https://studio.amicklabs.com/terms" },
   { label: "Privacy", href: "https://studio.amicklabs.com/privacy" },
   { label: "Refunds", href: "https://studio.amicklabs.com/refunds" },
 ] as const;
+
+
+export const support = {
+  heading: "Need a hand?",
+  headingAccent: "Let's talk.",
+  description: "Contact Nathan Amick for help with an Amick Labs product, course, or project.",
+  intro: "Have a question about something I've built or taught? Tell me what's going on. This form sends your message straight to my inbox.",
+  aside: "It's me reading these. A little context helps, whether you're stuck on a tool, following up on a course, or asking about working together.",
+  privacy: "Your name, email and message are sent through Resend so I can read and reply. Please leave out passwords, API keys and other private account details.",
+} as const;
