@@ -1,5 +1,5 @@
 /**
- * All site copy lives here. Edit freely — components only read from this file.
+ * Home page copy and support page introduction. Form labels live in SupportForm.tsx.
  * Anything marked TODO is a placeholder worth replacing with your own words.
  */
 
@@ -8,10 +8,12 @@ export const site = {
   /** Canonical origin. Must match the host Vercel serves as primary (www should redirect here). */
   url: "https://amicklabs.com",
   legalName: "Amick Labs LLC",
+  entity: "An Indiana limited liability company",
+  email: "hello@amicklabs.com",
   tagline: "Teaching engineers. Building things. Occasionally both at once.",
   /** One honest paragraph about what the company is. */
   intro:
-    "Amick Labs is my independent practice. I'm Nathan Amick, a software engineer with twenty-five years of production work, now pointed at teaching: most weeks I'm teaching other engineers, and the rest I'm building the things I teach about.",
+    "Amick Labs LLC is my independent practice. I'm Nathan Amick, a software engineer with twenty-five years of production work. Most weeks I'm teaching other engineers. The rest I'm consulting on software, producing videos for subscription clients, and building the things I teach about.",
   location: "Indianapolis, IN",
   person: {
     name: "Nathan Amick",
@@ -22,7 +24,7 @@ export const site = {
   },
 } as const;
 
-/** The three things the company does. Order is the order on the page. */
+/** The four things the company does. Order is the order on the page. */
 export const practices = [
   {
     key: "teaching",
@@ -39,7 +41,15 @@ export const practices = [
     lead: "Short engagements, clear outcomes.",
     body:
       "I take on architecture reviews, proof-of-concept builds, and fractional engineering for teams that need a senior hand for a defined stretch of time. Lately that means agentic systems that do real work in production, not demos.",
-    detail: "My availability is limited. Reach me through my personal site.",
+    detail: "My availability is limited. My email is at the bottom of this page.",
+  },
+  {
+    key: "video",
+    title: "Video",
+    lead: "Video production, by weekly subscription.",
+    body:
+      "I turn a client's raw footage, outlines and sketches into finished videos, with titles, descriptions, thumbnails and captions. I make them with my own tools and AI agents. Clients subscribe, send material from their phones and review each cut in Studio.",
+    detail: "Two finished videos a week. Weekly price set per client.",
   },
   {
     key: "labs",
@@ -83,3 +93,22 @@ export const readouts = [
   { label: "MODE", value: "TEACH / BUILD" },
   { label: "STATUS", value: "ACTIVE" },
 ] as const;
+
+/** Footer links. The legal pages live on Studio. */
+export const footerLinks = [
+  { label: "Support", href: "/support" },
+  { label: "Studio", href: "https://studio.amicklabs.com" },
+  { label: "Terms", href: "https://studio.amicklabs.com/terms" },
+  { label: "Privacy", href: "https://studio.amicklabs.com/privacy" },
+  { label: "Refunds", href: "https://studio.amicklabs.com/refunds" },
+] as const;
+
+
+export const support = {
+  heading: "Need a hand?",
+  headingAccent: "Let's talk.",
+  description: "Contact Nathan Amick for help with an Amick Labs product, course, or project.",
+  intro: "Have a question about something I've built or taught? Tell me what's going on. This form sends your message straight to my inbox.",
+  aside: "It's me reading these. A little context helps, whether you're stuck on a tool, following up on a course, or asking about working together.",
+  privacy: "Your name, email and message are sent through Resend so I can read and reply. Please leave out passwords, API keys and other private account details.",
+} as const;

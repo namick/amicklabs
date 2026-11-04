@@ -1,5 +1,5 @@
 import { Trace } from "@/components/Trace";
-import { practices, readouts, site, subjects, writing } from "@/config/site";
+import { footerLinks, practices, readouts, site, subjects, writing } from "@/config/site";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -62,7 +62,7 @@ export default function Home() {
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <Eyebrow>What I do</Eyebrow>
-          <div className="mt-10 grid gap-px bg-line md:grid-cols-3">
+          <div className="mt-10 grid gap-px bg-line md:grid-cols-2">
             {practices.map((p) => (
               <article key={p.key} className="group bg-bg p-8 transition-colors hover:bg-bg-raised">
                 <h2 className="font-display text-3xl font-medium tracking-[-0.02em] text-ink">
@@ -139,7 +139,20 @@ export default function Home() {
           </div>
           <div className="font-mono text-[11px] leading-relaxed tracking-wider text-ink-faint">
             <div>© {new Date().getFullYear()} {site.legalName}</div>
+            <div>{site.entity}</div>
             <div>{site.location}</div>
+            <div>
+              <a href={`mailto:${site.email}`} className="hover:text-amber">
+                {site.email}
+              </a>
+            </div>
+            <div className="mt-2 flex flex-wrap gap-x-4">
+              {footerLinks.map((l) => (
+                <a key={l.label} href={l.href} className="hover:text-amber">
+                  {l.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </footer>
