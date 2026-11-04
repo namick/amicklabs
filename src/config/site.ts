@@ -48,7 +48,7 @@ export const practices = [
     title: "Video",
     lead: "Video production, by weekly subscription.",
     body:
-      "I turn a client's raw footage, outlines and sketches into finished videos, with titles, descriptions, thumbnails and captions. I make them with my own tools and AI agents. Clients subscribe, send material from their phones and review each cut in Studio, and either of us can stop at any time.",
+      "I turn a client's raw footage, outlines and sketches into finished videos, with titles, descriptions, thumbnails and captions. I make them with my own tools and AI agents. Clients subscribe, send material from their phones and review each cut in Studio.",
     detail: "Two finished videos a week. Weekly price set per client.",
   },
   {
