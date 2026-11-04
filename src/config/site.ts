@@ -94,7 +94,10 @@ export const readouts = [
   { label: "STATUS", value: "ACTIVE" },
 ] as const;
 
-/** Footer links. Add only once these pages are live: the README's no-empty-links rule still holds. Legal links (terms, privacy, refunds) get added once Studio's pages are live. */
+/** Footer links. The legal pages live on Studio. */
 export const footerLinks = [
   { label: "Studio", href: "https://studio.amicklabs.com" },
+  { label: "Terms", href: "https://studio.amicklabs.com/terms" },
+  { label: "Privacy", href: "https://studio.amicklabs.com/privacy" },
+  { label: "Refunds", href: "https://studio.amicklabs.com/refunds" },
 ] as const;
